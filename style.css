@@ -1,0 +1,157 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #333333;
+    background-color: #F7F9FC;
+  }
+
+  h1, h2, h3, p {
+    margin: 0;
+  }
+
+  /* Section 1: Hello World */
+  .hello-section {
+    height: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1A2A3A, #00A8CC);
+    color: #FFFFFF;
+    text-align: center;
+  }
+
+  .hello-section h1 {
+    font-family: "Titillium Web", sans-serif;
+    height: 40vh;
+    font-size: 10rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  /* Section 2: Name and About */
+  .name-section {
+    display: flex;
+    padding: 5% 10%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin-top: -2rem;
+  }
+
+  .name-section .name {
+    width: 30%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding-right: 1rem;
+    border-right: 2px solid #00A8CC;
+    display: flex;
+    align-items: center;
+    color: #1A2A3A;
+  }
+
+  .name-section .about {
+    width: 70%;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    color: #333333;
+    line-height: 1.7;
+  }
+
+  /* Section 3: Features */
+  .feature-title{
+    display: flex;
+    justify-content: center;
+  }
+
+  .feature-title h3{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    border-bottom: 2px solid #00A8CC;
+  }
+
+
+  .features-section {
+    display: flex;
+    padding: 5% 10%;
+  }
+
+  .features-section h3 {
+    color: #1A2A3A;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .features-section .row {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+  }
+
+  .features-section .row .culprit{
+    display: flex;
+  }
+
+  .features-section .feature-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1 1 30%;
+    margin: 1rem;
+    min-height: 250px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .features-section .feature-card:hover {
+    transform: translateY(-10px);
+    background-color: #032a33;
+    color: #FFFFFF;
+  }
+
+  .features-section .feature-card:hover h3{
+    color: #FFFFFF;
+  }
+
+  .projects .row{
+    justify-content: center;
+  }
+
+  .projects a{
+    text-decoration: none;
+    color: #000;
+  }
+
+  /* Section 4: Social Links */
+  .social-section {
+    padding: 2rem;
+    text-align: center;
+    background-color: #1A2A3A;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .social-section a {
+    color: #FFFFFF;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    border: 2px solid #00A8CC;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .social-section a:hover {
+    background-color: #00A8CC;
+    color: #FFFFFF;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }

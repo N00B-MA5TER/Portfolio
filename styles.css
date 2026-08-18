@@ -797,6 +797,10 @@ img {
     overflow: hidden;
 }
 
+.project-card-wide {
+    grid-column: 1 / -1;
+}
+
 .project-card::before {
     content: "";
     position: absolute;

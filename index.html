@@ -1,91 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajdeep Nandy — Full-Stack Developer & ML Engineer</title>
+<meta name="description" content="Rajdeep Nandy — Full-stack developer and ML/CV engineer. Building production systems with Django, React and PostgreSQL, and computer vision pipelines with YOLOv8.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%2360a5fa'/%3E%3Cstop offset='50%25' stop-color='%23a78bfa'/%3E%3Cstop offset='100%25' stop-color='%2322d3ee'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='100' height='100' rx='22' fill='%23030308'/%3E%3Ctext x='50' y='68' font-size='52' font-family='Arial,sans-serif' font-weight='700' fill='url(%23g)' text-anchor='middle'%3ERN%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+<link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="hero-image">
-        <div class="hero-text">
-            <h1>RAJDEEP NANDY</h1>
-        </div>
-    </div>
 
-    <!-- <div class="topnav">
-        <a href="#AboutMe">About Me</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Contacts">Contacts</a>
-    </div> -->
+<div class="bg-fx" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+    <span class="grid-overlay"></span>
+</div>
 
-    <section id="AboutMe" class="about">
-        <div class="myImage">
-            <img src="./images/AniME.png" alt="anime version of a real person" width="100%" height="100%">
+<div class="progress-bar" id="progressBar" aria-hidden="true"></div>
+
+<header class="navbar" id="navbar">
+    <nav class="nav-inner">
+        <a href="#top" class="logo">RN<span class="logo-dot">.</span></a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#achievements" class="nav-link">Achievements</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="./RN_resume.pdf" download class="nav-resume-btn">Résumé</a>
+    </nav>
+</header>
+
+<main id="top">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-content reveal">
+            <p class="eyebrow">Hello, I'm <span class="wave">👋</span></p>
+            <h1 class="hero-name">Rajdeep <span class="gradient-text">Nandy</span></h1>
+            <h2 class="hero-role">
+                <span id="roleText" class="role-text">Full-Stack Developer</span><span id="roleIcon" class="role-icon" aria-hidden="true"></span><span class="cursor">|</span>
+            </h2>
+            <p class="hero-desc">
+                B.Tech CS student who ships things past the prototype stage — from a live
+                Django inventory platform running in production, to a YOLOv8 vision pipeline
+                built for ISRO's national robotics challenge.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">
+                    <span>View My Work</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <a href="./RN_resume.pdf" download class="btn btn-ghost">
+                    <span>Download Résumé</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/N00B-MA5TER" target="_blank" rel="noreferrer" aria-label="GitHub" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.09-3.11.68-3.77-1.35-3.77-1.35-.5-1.29-1.24-1.63-1.24-1.63-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.29-5.1-1.25-5.1-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .95-.31 3.12 1.15a10.7 10.7 0 0 1 5.68 0c2.16-1.46 3.11-1.15 3.11-1.15.62 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.13 5.55.4.35.76 1.04.76 2.1 0 1.51-.01 2.73-.01 3.11 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rajdeep-nandy-2997a82a4/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+                </a>
+                <a href="https://x.com/RajdeepNan16156" target="_blank" rel="noreferrer" aria-label="X (Twitter)" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.24 2h3.28l-7.16 8.19L23 22h-6.55l-5.14-6.72L5.4 22H2.1l7.66-8.76L1.5 2h6.72l4.64 6.14L18.24 2Zm-1.15 18h1.82L7.02 3.9H5.06l12.03 16.1Z"/></svg>
+                </a>
+                <a href="mailto:rajdeepnandyofficial@gmail.com" aria-label="Email" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm19 3.24-8.53 6.14a1 1 0 0 1-1.17 0L3 7.24V19h18V7.24ZM3.5 5l8.5 6.11L20.5 5h-17Z"/></svg>
+                </a>
+            </div>
         </div>
-        <div class="about-content">
-            <h2>About Me</h2>
-            <p>Hi! My name is RAJDEEP NANDY.<br>I am an aspiring full-stack web developer focused on creating visually appealing and user-friendly websites. I’m passionate about solving real-world problems through code, contributing to open-source projects, and building impactful digital solutions. I enjoy bringing ideas to life in the browser and experimenting with new web technologies. Explore my projects below and connect with me on social media!</p>
+
+        <div class="hero-visual reveal">
+            <div class="avatar-ring">
+                <div class="avatar-glow"></div>
+                <img src="./images/profile.jpg" alt="Rajdeep Nandy" class="avatar-img">
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-indicator" aria-label="Scroll down">
+            <span class="scroll-dot"></span>
+        </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="section-head reveal">
+            <span class="section-tag">01 — Get to know me</span>
+            <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        </div>
+
+        <div class="about-grid reveal">
+            <p class="about-text">
+                I'm a Computer Science undergrad at <strong>MAKAUT</strong> who cares more about
+                shipping working software than shipping perfect-looking demos. I designed and
+                deployed a production-grade <strong>inventory &amp; order management system</strong>
+                for a real hardware business — role-based access, approval workflows, automated
+                CI/CD with GitHub Actions and Cloud Run, and PostgreSQL backups running in the wild.
+                <br><br>
+                On the other end of the stack, I built the onboard computer vision pipeline for
+                <strong> ISRO's IRoC-U 2026 robotics challenge</strong>, training lightweight YOLOv8
+                models for autonomous aerial target detection in GPS-denied environments — helping
+                my team land in the <strong>Top 74 nationwide</strong> out of ~1,500 teams.
+                I like problems that force me to go from "it works on my machine" to
+                "it works in production."
+            </p>
+
+            <div class="fact-grid">
+                <div class="fact-card">
+                    <span class="fact-value">9.1</span>
+                    <span class="fact-label">GPA · B.Tech CSE</span>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-value">Top 74</span>
+                    <span class="fact-label">ISRO IRoC-U 2026, Nationwide</span>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-value">Top 15</span>
+                    <span class="fact-label">BurnBrain Hackathon, NIT Durgapur</span>
+                </div>
+                <div class="fact-card">
+                    <span class="fact-value">4+</span>
+                    <span class="fact-label">Production-grade projects shipped</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="Projects">
-        <div class="title">
-            <h2>Projects</h2>
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="section-head reveal">
+            <span class="section-tag">02 — Toolbox</span>
+            <h2 class="section-title">Skills &amp; <span class="gradient-text">Stack</span></h2>
         </div>
 
-        <div class="project-links">
-            <a>
-                <div class="project-card">
-                    <h3>Project 1</h3>
-                    <p>Something description something.</p>
+        <div class="skills-grid reveal">
+            <div class="skill-group">
+                <h3 class="skill-group-title">Languages</h3>
+                <div class="chip-row">
+                    <span class="chip"><i class="devicon-python-plain colored"></i>Python</span>
+                    <span class="chip"><i class="devicon-cplusplus-plain colored"></i>C++</span>
+                    <span class="chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+                    <span class="chip"><span class="chip-emoji">🗄️</span>SQL</span>
                 </div>
-            </a>
-            <a>
-                <div class="project-card">
-                    <h3>Project 2</h3>
-                    <p>Something something something.</p>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Frameworks</h3>
+                <div class="chip-row">
+                    <span class="chip"><i class="devicon-django-plain colored"></i>Django</span>
+                    <span class="chip"><i class="devicon-react-original colored"></i>React</span>
+                    <span class="chip"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+                    <span class="chip"><i class="devicon-express-original"></i>Express</span>
+                    <span class="chip"><i class="devicon-fastapi-plain colored"></i>FastAPI</span>
                 </div>
-            </a>
-            <a>
-                <div class="project-card">
-                    <h3>Project 3</h3>
-                    <p>Something content something.</p>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Database</h3>
+                <div class="chip-row">
+                    <span class="chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span>
                 </div>
-            </a>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Cloud &amp; DevOps</h3>
+                <div class="chip-row">
+                    <span class="chip"><i class="devicon-docker-plain colored"></i>Docker</span>
+                    <span class="chip"><i class="devicon-githubactions-plain"></i>GitHub Actions</span>
+                    <span class="chip"><i class="devicon-googlecloud-plain colored"></i>Google Cloud Run</span>
+                    <span class="chip"><span class="chip-emoji">⚡</span>Neon</span>
+                    <span class="chip"><i class="devicon-git-plain colored"></i>Git</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <h3 class="skill-group-title">Machine Learning</h3>
+                <div class="chip-row">
+                    <span class="chip"><span class="chip-emoji">🎯</span>YOLOv8</span>
+                    <span class="chip"><i class="devicon-opencv-plain colored"></i>OpenCV</span>
+                    <span class="chip"><i class="devicon-tensorflow-original colored"></i>TensorFlow</span>
+                    <span class="chip"><i class="devicon-scikitlearn-plain colored"></i>Scikit-learn</span>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="Contacts">
-        <div class="title">
-            <h2>Contacts</h2>
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="section-head reveal">
+            <span class="section-tag">03 — Track record</span>
+            <h2 class="section-title">Experience &amp; <span class="gradient-text">Education</span></h2>
         </div>
 
-        <div class="contact-links">
-            <a href="https://github.com/N00B-MA5TER">
-                <div class="contact-card">
-                    <p>Github</p>
+        <div class="timeline reveal">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-head">
+                        <h3>Independent Software Engineer</h3>
+                        <span class="timeline-badge">Live in Production</span>
+                    </div>
+                    <p class="timeline-sub">Inventory &amp; Order Management System</p>
+                    <ul class="timeline-list">
+                        <li>Designed and deployed a production-grade inventory and order management system for a real hardware business using Django, PostgreSQL, Docker, and Google Cloud Run.</li>
+                        <li>Gathered evolving client requirements and redesigned the architecture multiple times, introducing role-based access control, approval workflows, and inventory management features.</li>
+                        <li>Built an automated CI/CD pipeline with GitHub Actions, Docker, and Cloud Run, including automated testing, database migrations, and production deployment.</li>
+                        <li>Implemented automated PostgreSQL backups, structured request/query logging, and resolved production issues involving IAM permissions, hostname validation, and application logging.</li>
+                    </ul>
                 </div>
-            </a>
-            <a href="https://www.linkedin.com/in/rajdeep-nandy-2997a82a4/">
-                <div class="contact-card">
-                    <p>LinkedIn</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-head">
+                        <h3>B.Tech, Computer Science &amp; Engineering</h3>
+                        <span class="timeline-badge timeline-badge-alt">GPA 9.1</span>
+                    </div>
+                    <p class="timeline-sub">Maulana Abul Kalam Azad University of Technology · West Bengal, India</p>
+                    <p class="timeline-meta">June 2024 – Present</p>
                 </div>
-            </a>
-            <a href="https://x.com/RajdeepNan16156">
-                <div class="contact-card">
-                    <p>Twitter</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-card">
+                    <div class="timeline-card-head">
+                        <h3>Senior Secondary</h3>
+                        <span class="timeline-badge timeline-badge-alt">85%</span>
+                    </div>
+                    <p class="timeline-sub">DAV Model School, Durgapur</p>
+                    <p class="timeline-meta">May 2021 – May 2023</p>
                 </div>
-            </a>
+            </div>
         </div>
     </section>
 
-    <div class="footer-text">
-        <footer>© 2025 Rajdeep Nandy, Created while Learning</footer>
-    </div>
-    
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="section-head reveal">
+            <span class="section-tag">04 — Selected work</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        </div>
+
+        <div class="projects-grid reveal">
+
+            <article class="project-card">
+                <div class="project-card-top">
+                    <span class="project-badge">Live in Production</span>
+                    <div class="project-link-group">
+                        <a href="https://nandy-inventory-1048491232922.asia-south1.run.app/" target="_blank" rel="noreferrer" class="project-link-icon" aria-label="Visit live site">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M7 17 17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </a>
+                        <a href="https://github.com/N00B-MA5TER/Inventory-Management" target="_blank" rel="noreferrer" class="project-link-icon" aria-label="View source on GitHub">
+                            <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.09-3.11.68-3.77-1.35-3.77-1.35-.5-1.29-1.24-1.63-1.24-1.63-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.29-5.1-1.25-5.1-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .95-.31 3.12 1.15a10.7 10.7 0 0 1 5.68 0c2.16-1.46 3.11-1.15 3.11-1.15.62 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.13 5.55.4.35.76 1.04.76 2.1 0 1.51-.01 2.73-.01 3.11 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <h3 class="project-title">Inventory &amp; Order Management System</h3>
+                <p class="project-desc">Production-grade platform for a real hardware business — role-based access control, approval workflows, and inventory tracking, deployed through an automated GitHub Actions → Docker → Cloud Run pipeline with PostgreSQL backups and structured logging.</p>
+                <div class="project-tags">
+                    <span class="tag">Django</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">Cloud Run</span>
+                    <span class="tag">CI/CD</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-top">
+                    <span class="project-badge project-badge-alt">Full-Stack</span>
+                    <a href="https://github.com/N00B-MA5TER/DevVault" target="_blank" rel="noreferrer" class="project-link-icon" aria-label="View source on GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.09-3.11.68-3.77-1.35-3.77-1.35-.5-1.29-1.24-1.63-1.24-1.63-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.29-5.1-1.25-5.1-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .95-.31 3.12 1.15a10.7 10.7 0 0 1 5.68 0c2.16-1.46 3.11-1.15 3.11-1.15.62 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.13 5.55.4.35.76 1.04.76 2.1 0 1.51-.01 2.73-.01 3.11 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                    </a>
+                </div>
+                <h3 class="project-title">DevVault</h3>
+                <p class="project-desc">Full-stack portfolio platform with Google OAuth authentication, JWT session management, and PostgreSQL-backed user profiles — responsive project showcasing, technology tagging, inline profile editing, and a RESTful backend API.</p>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">OAuth</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-top">
+                    <span class="project-badge project-badge-alt">Real-Time</span>
+                    <a href="https://github.com/N00B-MA5TER/AuctionHub" target="_blank" rel="noreferrer" class="project-link-icon" aria-label="View source on GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.09-3.11.68-3.77-1.35-3.77-1.35-.5-1.29-1.24-1.63-1.24-1.63-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.29-5.1-1.25-5.1-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .95-.31 3.12 1.15a10.7 10.7 0 0 1 5.68 0c2.16-1.46 3.11-1.15 3.11-1.15.62 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.13 5.55.4.35.76 1.04.76 2.1 0 1.51-.01 2.73-.01 3.11 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                    </a>
+                </div>
+                <h3 class="project-title">AuctionHub</h3>
+                <p class="project-desc">Real-time auction and bidding platform on the PERN stack — Socket.IO powers live bid updates, JWT auth is kept in HTTP-only cookies, and PostgreSQL row-level locking (SELECT&nbsp;...&nbsp;FOR&nbsp;UPDATE) keeps concurrent bids consistent, with automatic auction expiry and a Dockerized setup.</p>
+                <div class="project-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                    <span class="tag">Express</span>
+                    <span class="tag">PostgreSQL</span>
+                    <span class="tag">Socket.IO</span>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-card-top">
+                    <span class="project-badge">Top 74 Nationwide</span>
+                    <a href="https://github.com/N00B-MA5TER/ML-Projects" target="_blank" rel="noreferrer" class="project-link-icon" aria-label="View source on GitHub">
+                        <svg viewBox="0 0 24 24" width="18" height="18"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.09-3.11.68-3.77-1.35-3.77-1.35-.5-1.29-1.24-1.63-1.24-1.63-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.29-5.1-1.25-5.1-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .95-.31 3.12 1.15a10.7 10.7 0 0 1 5.68 0c2.16-1.46 3.11-1.15 3.11-1.15.62 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.13 5.55.4.35.76 1.04.76 2.1 0 1.51-.01 2.73-.01 3.11 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                    </a>
+                </div>
+                <h3 class="project-title">Autonomous Vision System — ISRO IRoC-U 2026</h3>
+                <p class="project-desc">Onboard computer vision pipeline for autonomous aerial target detection and coordinate estimation in GPS-denied environments — built a synthetic data generation workflow and trained lightweight YOLOv8 models, helping the team reach the Top 74 nationwide.</p>
+                <div class="project-tags">
+                    <span class="tag">YOLOv8</span>
+                    <span class="tag">OpenCV</span>
+                    <span class="tag">Python</span>
+                    <span class="tag">Computer Vision</span>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section class="section" id="achievements">
+        <div class="section-head reveal">
+            <span class="section-tag">05 — Recognition</span>
+            <h2 class="section-title">Achievements &amp; <span class="gradient-text">Certifications</span></h2>
+        </div>
+
+        <div class="achievements-grid reveal">
+            <div class="achievement-card">
+                <div class="achievement-icon">🛰️</div>
+                <h3>ISRO Robotics Challenge 2026</h3>
+                <p class="achievement-sub">IRoC-U 2026 · Top 74 Teams Nationwide</p>
+                <p class="achievement-desc">Advanced from ~1,500 participating teams to the Top 74 in India after completing the Preliminary and Qualification rounds of ISRO's national robotics challenge.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🧠</div>
+                <h3>BurnBrain Hackathon 2025</h3>
+                <p class="achievement-sub">NIT Durgapur · Top 15 / 100+ Teams</p>
+                <p class="achievement-desc">Built a web platform for JEE aspirants featuring personalized dashboards, analytics, custom test generation, and AI-based recommendations using the Gemini API.</p>
+            </div>
+            <div class="achievement-card">
+                <div class="achievement-icon">🎓</div>
+                <h3>Full-Stack Web Development</h3>
+                <p class="achievement-sub">Certification · Dr. Angela Yu</p>
+                <p class="achievement-desc">Completed The Complete Full-Stack Web Development Bootcamp, covering HTML/CSS/JS, React, Node.js, and relational databases end to end.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="contact">
+        <div class="contact-inner reveal">
+            <span class="section-tag">06 — Get in touch</span>
+            <h2 class="contact-title">Let's build something <span class="gradient-text">worth shipping</span>.</h2>
+            <p class="contact-desc">Open to internships, freelance work, and interesting collaborations. If you've got a hard problem, I'd love to hear about it.</p>
+            <div class="contact-actions">
+                <a href="mailto:rajdeepnandyofficial@gmail.com" class="btn btn-primary">
+                    <span>Say Hello</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </a>
+                <button class="btn btn-ghost" id="copyEmailBtn" type="button" data-email="rajdeepnandyofficial@gmail.com">
+                    <span id="copyEmailText">Copy Email</span>
+                </button>
+            </div>
+            <div class="hero-socials contact-socials">
+                <a href="https://github.com/N00B-MA5TER" target="_blank" rel="noreferrer" aria-label="GitHub" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.09-3.11.68-3.77-1.35-3.77-1.35-.5-1.29-1.24-1.63-1.24-1.63-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.16 1.71 1.16 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.29-5.1-1.25-5.1-5.56 0-1.23.44-2.23 1.16-3.02-.12-.29-.5-1.45.11-3.02 0 0 .95-.31 3.12 1.15a10.7 10.7 0 0 1 5.68 0c2.16-1.46 3.11-1.15 3.11-1.15.62 1.57.23 2.73.11 3.02.72.79 1.16 1.79 1.16 3.02 0 4.32-2.63 5.27-5.13 5.55.4.35.76 1.04.76 2.1 0 1.51-.01 2.73-.01 3.11 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/rajdeep-nandy-2997a82a4/" target="_blank" rel="noreferrer" aria-label="LinkedIn" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.15 1.45-2.15 2.94v5.66H9.35V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+                </a>
+                <a href="https://x.com/RajdeepNan16156" target="_blank" rel="noreferrer" aria-label="X (Twitter)" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M18.24 2h3.28l-7.16 8.19L23 22h-6.55l-5.14-6.72L5.4 22H2.1l7.66-8.76L1.5 2h6.72l4.64 6.14L18.24 2Zm-1.15 18h1.82L7.02 3.9H5.06l12.03 16.1Z"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <p>© <span id="year"></span> Rajdeep Nandy. Built while drinking Diet Coke!🥤</p>
+    <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+</footer>
+
+<script src="./script.js"></script>
 </body>
 </html>
